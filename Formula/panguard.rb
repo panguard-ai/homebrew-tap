@@ -26,8 +26,15 @@ class Panguard < Formula
 
   def install
     libexec.install Dir["*"]
-    bin.install_symlink libexec/"bin/panguard"
-    bin.install_symlink libexec/"bin/panguard" => "pga"
+    # Write wrapper scripts that resolve the real path (not symlink)
+    (bin/"panguard").write <<~BASH
+      #!/usr/bin/env bash
+      exec node "#{libexec}/dist/cli/index.js" "$@"
+    BASH
+    (bin/"pga").write <<~BASH
+      #!/usr/bin/env bash
+      exec node "#{libexec}/dist/cli/index.js" "$@"
+    BASH
   end
 
   test do
