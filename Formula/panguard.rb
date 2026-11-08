@@ -1,24 +1,24 @@
 class Panguard < Formula
   desc "Security platform for AI agents - scan, audit, and protect AI skills"
   homepage "https://panguard.ai"
-  version "1.9.0"
+  version "1.10.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/panguard-ai/panguard-ai/releases/download/v#{version}/panguard-darwin-arm64.tar.gz"
-      sha256 "289cac85694a44407f3541d8071fba4edbfbf5459180c443b629c1177b8da108"
+      sha256 "00b6b0af8dd12f20dd6740d8e27871ec27d76fcfd8f9052c4e169450bb2634e4"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/panguard-ai/panguard-ai/releases/download/v#{version}/panguard-linux-arm64.tar.gz"
-      sha256 "692bb2d5fc8ec7b1a7c2ef7abed8610fe05f2bdfd6d76d953a8e0482d31760ba"
+      sha256 "849eb8a931bc644079eef5b53f722f07c0f60fb1cdf2198558a4ccabe2ea8543"
     end
     on_intel do
       url "https://github.com/panguard-ai/panguard-ai/releases/download/v#{version}/panguard-linux-x64.tar.gz"
-      sha256 "eb5370b2d887db4b8045922f5fe45b195b1346b042f679a1b40a1ab3859d6aec"
+      sha256 "69c85072b84fd04deb45431ee1dd7f09a732221d48d3dbdb2b48d9e8dc3eada9"
     end
   end
 
